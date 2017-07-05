@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+    </head>
+    <body>
+        <svg id="svg" style="width:100%;height:1400px"/>
+    </body>
+    <script>
+
+        var svg = d3.select('#svg');
+
+        
+        var svg = d3.select('#svg');
+
+        svg.append('rect')
+           .attr('x', 180)
+           .attr('y', 100)
+           .attr('width', 270)
+           .attr('height', 600)
+           .style('fill', 'black');
+
+
+        var g = svg.append('circle')
+           .attr('cx', 300)
+           .attr('cy',200 )
+           .attr('r', 60)
+           .style('fill', 'blue');
+
+       
+        g.on('click', function() {
+            d3.select(this).style('fill', 'green');
+        });
+
+    var y = svg.append('circle')
+           .attr('cx', 300)
+           .attr('cy',370 )
+           .attr('r', 60)
+           .style('fill', 'blue');
+
+       
+        y.on('click', function() {
+            d3.select(this).style('fill', 'yellow');
+        });
+        
+         var r = svg.append('circle')
+           .attr('cx', 300)
+           .attr('cy',550 )
+           .attr('r', 60)
+           .style('fill', 'blue');
+
+       
+        r.on('click', function() {
+            d3.select(this).style('fill', 'red');
+        });
+
+
+    </script>
+</html>
